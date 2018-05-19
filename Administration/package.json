@@ -1,0 +1,20 @@
+{
+  "name": "administration",
+  "version": "1.0.0",
+  "description": "Create and View Forms",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-animate": "^1.6.10",
+    "angular-route": "^1.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ricardo Nazareth de Campos",
+  "license": "MIT"
+}

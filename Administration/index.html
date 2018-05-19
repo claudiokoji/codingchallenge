@@ -1,18 +1,18 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="app">
   <head>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="lib/vendor/angular-ui-bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
-    <link src="css/vendor/bootstrap/bootstrap.css" rel="stylesheet" />
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <link href="css/vendor/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
+    <div ng-view></div>
   </body>
 </html>
