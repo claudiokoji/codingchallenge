@@ -1,67 +1,82 @@
+# Passos Executados
+
+Fork do projeto
+
+Criação de Pasta para o Admin e para o App Mobile
+
+Usar npm install para baixar angular 1.6 e angular animate
+
+Baixei CSS do Bootstrap 
+
+Baixei .js do Angular UI para junto com o CSS do BootStrap fazer um layout melhor
+
+Criei index.html com rascunho angular 
+
+Começei a separar os componentes Angular do Admin
+
+Definição Esqueleto do projeto baseado nos principios do https://github.com/johnpapa/angular-styleguide/tree/master/a1
+
+Criação de Esqueleto do projeto Mobile com o ionic start e definição de plataforma android com ionic cordova add platform android
+
+Tela para cadastro de lista de pergunta offline e sem qrcode OK  
+
+Mobile com Login Fake e Lista Fake de Perguntas OK  
+Tela cadastro gerando QrCode Offline e Tela Fake Consulta OK
+
+Criar Serviços Rest e chama-los
+
+# TODO
+
+Criar Banco e Serviços Rest  
+Salvar Questionario Server no Banco
+
+Mobile usando ID fixo, puxar questionario de Rest e salvar em banco local(do browser mesmo)  
+Admin gerar QrCode do Questionario
+
+Mobile Enviar Respostas para Server  
+Consulta ver resposta
+
+Mobile Ler QrCode  
+Mobile com Login Google ou Facebook(o que der certo) e tela para por resposta nas perguntas  
+Consulta Enviar Push
+
+Mobile receber Push e mostrar Toast
+
+## Administracao
+### Criar Questionario
+1. Nome do Questionario
+2. Grid de Lista de Perguntas
+3. Ao clicar no item da lista abre o detalhe
+4. Pergunta terá texto da pergunta e tipo de resposta
+5. Finaliza mostrando ID do questionatio e imagem de QR Code(ID ou perguntas?)
+6. O mesmo questionario pode ir para diferentes pessoas?
+### Ver Questionario
+1. Estado inicial, textbox senha(ID) questionario
+2. Mostra mesma tela do anterior em modo leitura com as respostas de cada pergunta
+3. Botao Enviar Notificao que abre Modal
+4. No Modal escreve texto e manda por Push
+5. Ver resposta por pessoas
+6. Ver QR Code do questionario
+
+## BackEnd
+1. Banco Mongo para guardar as perguntas e respostas
+2. Eventualmente servir de ponte para notificacao
+3. Serviço Rest no Express para validar, devolver,gravar questionarios
+
+## Mobile
+1. Login com Facebook ou Google
+2. Mostrar Lista de questionario já cadastrados antes(DB Local)
+3. Botao Ler Qr Code
+4. Após ler abrir tela com as perguntas
+5. Após responder volta para tela Inicial
+6. Pode receber push
 
 
-# Desafio Mobile + Front-End
- 
-A TOTVS quer lançar um aplicativo de questionários. Foi feita uma planning com o time o qual você é integrante e a sprint começou. Suas tarefas são as seguintes:
- 
-## Construir a Página do administrador.
- 
-O usuário deve acessar a página e ter duas opções: Criar Novo Questionário ou Visualizar Questionário.
-
-Criar novo questionário:
-
-- O usuário criará uma ou várias perguntas (com respostas do tipo texto ou verdadeiro/falso).
-- Ao inserir as perguntas que deseja exibir, o usuário finaliza o formulário e lhe é apresentado uma senha de acesso e um QR Code.
-
-Visualizar Questionário
-
-- Usuário insere uma senha de acesso (obtida quando finaliza a criação de um formulário) e pode visualizar todas as respostas obtidas para aquele formulário.
-- Ao lado da resposta, ele visualiza o nome do usuário que fez o preenchimento e um botão para "Enviar uma notificação".
-- Ao "Enviar uma Notificação", deve escrever um texto curto que será enviado ao usuário via Push Notifications.
-- Ele pode clicar sobre o nome da pessoa e visualizar as respostas dela para as perguntas.
-- Também deve ser possível visualizar o QR Code que está vinculado ao formulário.
- 
-## Construir o aplicativo do usuário
-
-- O usuário deve fazer login no aplicativo utilizando sua conta no Facebook ou Google.
-- Ao fazer login, deve aparecer uma tela com uma lista com todos os questionários cadastrados.
-- Deve haver um botão para que ele faça a leitura de um QR Code (o mesmo gerado na página do administrador) e seja encaminhado diretamente para o questionário correspondente.
-- Ao efetuar a leitura do QR Code, deve montar o formulário com as questões configuradas pelo administrador.
-- Ao responder o questionário, retorna para a tela de lista com os questionários.
-- O usuário poderá receber Push Notifications via aplicativo com mensagens do administrador.
- 
-## Requisitos:
-
-- Utilizar Angular ou React para construção da página do administrador (se você é um TOTVER e disputa uma vaga interna, a página do administrador deve ser feita em THF).
-- Utilizar Node.JS ou AdvPL para o desenvolvimento do Back-End.
-- Utilize ionic framework para desenvolvimento do aplicativo.
-- Descreva no README o passo a passo para execução do seu projeto.
-- Deixe seu repositório público para analise do Pull Request.
- 
-## Ganhe mais pontos:
-
-- Criação testes unitários e instrumentados.
-- Garantia da segurança dos dados.
-- Criação de uma estrutura de deploy da aplicação.
-- Garantia a escalabilidade da aplicação (Pessoas | Infraestrutura).
-- Fique à vontade para adicionar mais features no aplicativo desde que esteja dentro do contexto.
- 
-## Submissão:
-
-- Criar um fork deste repositório e entregar via Pull Request.
- 
-## Prazo de entrega sugerido:
-
-- 4 dias
- 
-
-A palavra chave é: interação
-
-Você não precisa concluir o desafio todo para criar seu Pull Request. Vá até onde conseguir da melhor forma possível, você será avaliado pelo avanço que obteve.
-
-Descreva no seu README até que ponto do desafio você pretende realizar. Por exemplo:
-
-- Criação do aplicativo e página do administrador, mas sem opção de envio de Push Notifications.
-- Criação somente do aplicativo, utilizando um QR Code ‘fake’ gerado via site: exemplo.com, com o seguinte conteúdo: etc etc etc.
-- Criação somente da página, simulando as respostas via aplicativo através de uma chamada REST feita via POSTMAN com as seguintes características...
-- etc.
+## Extras
+* Teste Unitário
+* Segurança dos dados
+* Estrutura Deploy(gulp?)
+* Escalabilidade
+* Outras features
+* Usar Angular5 e Ionic3
+* Doc API Rest Swagger

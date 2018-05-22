@@ -1,0 +1,54 @@
+<div class="jumbotron">
+        <div class="container">
+            <h1>Preencha dados do Questionário</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Dados</h2>
+                </div><!-- fim .panel-heading -->
+                <div class="panel-body">           
+                        <label for="nome">Nome do Questionário:</label>
+                        <input type="text" ng-model="vm.formName" name="nome" id="nome" class="form-control">
+                        <p></p>
+                        <p></p>
+
+                        <label for="nome">Pergunta:</label>
+                        <input type="text" ng-model="vm.questionName" name="nome" id="nome" class="form-control">
+                        <p></p>
+                        <p></p>
+
+                        <label for="questionType">Tipo:</label>
+                        <input type="radio" ng-model="vm.questionType" value="text" checked> Texto
+                        <input type="radio" ng-model="vm.questionType"  value="trueFalse">Verdadeiro/Falso<br>
+                        <p></p>
+                        <p></p>
+
+                        <button type="button" class="btn btn-primary" ng-click="vm.addQuestion()"  btn-checkbox-true="1" btn-checkbox-false="0">
+                            Adicionar Pergunta
+                        </button>
+                        <p></p>
+                        <p></p>
+                        <table class="table table-hover">
+                            <th>Pergunta</th>
+                            <th>Tipo de Resposta</th>
+                            <tr ng-repeat="q in vm.forms">
+                                <td>{{q.name}}</td>  
+                                <td>{{q.type}}</td>                              
+                            </tr>                            
+                        </table>
+                        <br><br>
+                        <button type="button" class="btn btn-primary btn-lg" ng-click="vm.createForm()"  btn-checkbox-true="1" btn-checkbox-false="0">
+                            CRIAR QUESTIONARIO
+                        </button>
+                        <!-- <img src="../../img/questionnaire-2834264_640.png" width="100px" height="100px" class="img-thumbnail img-responsive">            -->
+                </div><!-- fim .panel-body -->
+                <div class="panel-body" ng-show="vm.qrReady">
+                    <!-- <qrcode data="aa" version="2" error-correction-level="Q" size="200" color="#fff" background="#000"></qrcode> -->
+                    <qrcode data="{{vm.qrData}}" version="2" error-correction-level="Q" size="200" color="#fff" background="#000"></qrcode>
+                </div>
+            </div><!-- fim .panel -->
+            <!-- ... panel aqui ... -->
+       
+        </div><!-- fim .container da pagina -->    
