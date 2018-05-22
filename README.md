@@ -18,16 +18,14 @@ Definição Esqueleto do projeto baseado nos principios do https://github.com/jo
 
 Criação de Esqueleto do projeto Mobile com o ionic start e definição de plataforma android com ionic cordova add platform android
 
+Tela para cadastro de lista de pergunta offline e sem qrcode OK  
 
+Mobile com Login Fake e Lista Fake de Perguntas OK  
+Tela cadastro gerando QrCode Offline e Tela Fake Consulta OK
+
+Criar Serviços Rest e chama-los
 
 # TODO
-
-## Minimo
-Tela para cadastro de lista de pergunta offline e sem qrcode OK  
-Mobile com Login Fake e Lista Fake de Perguntas 
-
-Tela cadastro gerando QrCode Offline e Tela Fake Consulta
-
 
 Criar Banco e Serviços Rest  
 Salvar Questionario Server no Banco

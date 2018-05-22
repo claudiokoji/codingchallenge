@@ -1,11 +1,6 @@
 (function() {
     'use strict';
 
-    // angular.module("app").config(['$locationProvider', function($locationProvider) {
-    //   // Configure existing providers
-    //   $locationProvider.hashPrefix('!');
-    // }]);
-
     angular.module("app").config(config);
     config.$inject = ['$routeProvider'];
     function config($routeProvider) {
@@ -25,6 +20,11 @@
             templateUrl : "app/formView/formView.html",
             controller: 'FormViewController',
             controllerAs: 'vm'
-        });
+        })
+        .when("/list", {
+            templateUrl : "app/formList/formList.html",
+            controller: 'FormListController',
+            controllerAs: 'vm'
+        });        
     }
 })();
