@@ -32,7 +32,7 @@ Visualizar Questionário
  
 ## Requisitos:
 
-- Utilizar Angular ou React para construção da página do administrador (se você é um TOTVER e disputa uma vaga interna, a página do administrador deve ser feita em THF).
+- Utilizar Angular ou React para construção da página do administrador (se você é um TOTVER e disputa uma vaga interna, a página do administrador deve ser feita em PO-UI).
 - Utilizar Node.JS ou AdvPL para o desenvolvimento do Back-End.
 - Utilize ionic framework para desenvolvimento do aplicativo.
 - Descreva no README o passo a passo para execução do seu projeto.
